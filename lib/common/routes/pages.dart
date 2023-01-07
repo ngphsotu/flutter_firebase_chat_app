@@ -1,10 +1,10 @@
 // ignore_for_file: constant_identifier_names
 
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
-import 'package:get/get.dart';
-
 import 'routes.dart';
+import '/pages/welcome/index.dart';
 
 class AppPages {
   static const INITIAL = AppRoutes.INITIAL;
@@ -13,15 +13,15 @@ class AppPages {
   static List<String> history = [];
 
   static final List<GetPage> routes = [
-    /*
     GetPage(
       name: AppRoutes.INITIAL,
-      page: () => WelcomePage(),
-      binding: WelcomeBinding(),
-      middlewares: [
-        RouteWelcomeMiddleware(priority: 1),
-      ],
+      page: () => const WelcomePage(),
+      binding: WelcomeBlinding(),
+      // middlewares: [
+      //   RouteWelcomeMiddleware(priority: 1),
+      // ],
     ),
+    /*
     GetPage(
       name: AppRoutes.SIGN_IN,
       page: () => SignInPage(),
@@ -48,6 +48,7 @@ class AppPages {
     //聊天详情
     GetPage(name: AppRoutes.Chat, page: () => ChatPage(), binding: ChatBinding()),
 
-    GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),*/
+    GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),
+    */
   ];
 }
