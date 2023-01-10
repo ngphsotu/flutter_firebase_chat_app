@@ -1,6 +1,6 @@
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'index.dart';
@@ -67,7 +67,9 @@ class WelcomePage extends GetView<WelcomeController> {
                       Positioned(
                         bottom: 90,
                         child: ElevatedButton(
-                          onPressed: () => null,
+                          onPressed: () {
+                            controller.handleSignIn();
+                          },
                           style: ButtonStyle(
                             backgroundColor:
                                 MaterialStateProperty.all(Colors.white),

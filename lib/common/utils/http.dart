@@ -212,9 +212,7 @@ class HttpUtil {
     bool cacheDisk = false,
   }) async {
     Options requestOptions = options ?? Options();
-    if (requestOptions.extra == null) {
-      requestOptions.extra = Map();
-    }
+    requestOptions.extra ??= {};
     requestOptions.extra!.addAll({
       "refresh": refresh,
       "noCache": noCache,
@@ -222,7 +220,7 @@ class HttpUtil {
       "cacheKey": cacheKey,
       "cacheDisk": cacheDisk,
     });
-    requestOptions.headers = requestOptions.headers ?? {};
+    requestOptions.headers ??= {};
     Map<String, dynamic>? authorization = getAuthorizationHeader();
     if (authorization != null) {
       requestOptions.headers!.addAll(authorization);

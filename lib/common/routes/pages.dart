@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'routes.dart';
 import '/pages/welcome/index.dart';
+import '../../pages/sign_in/index.dart';
 
 class AppPages {
   static const INITIAL = AppRoutes.INITIAL;
@@ -21,13 +22,12 @@ class AppPages {
       //   RouteWelcomeMiddleware(priority: 1),
       // ],
     ),
-    /*
     GetPage(
       name: AppRoutes.SIGN_IN,
-      page: () => SignInPage(),
+      page: () => const SignInPage(),
       binding: SignInBinding(),
     ),
-
+    /*
     // check if needed to login or not
     GetPage(
       name: AppRoutes.Application,
